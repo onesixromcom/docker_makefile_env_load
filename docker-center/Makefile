@@ -8,13 +8,13 @@ network:
 	${DOCKER_DIR}/network.sh
 
 up-traefik:
-	docker-compose --project-name rt-traefik --file ${DOCKER_DIR}/docker-compose.traefik.yml up -d --build
+	docker-compose --project-name my-traefik --file ${DOCKER_DIR}/docker-compose.traefik.yml up -d --build
 
 stop-traefik:
-	docker-compose --project-name rt-traefik --file ${DOCKER_DIR}/docker-compose.traefik.yml stop
+	docker-compose --project-name my-traefik --file ${DOCKER_DIR}/docker-compose.traefik.yml stop
 
 stop-traefik:
-	docker-compose --project-name rt-traefik --file ${DOCKER_DIR}/docker-compose.traefik.yml down
+	docker-compose --project-name my-traefik --file ${DOCKER_DIR}/docker-compose.traefik.yml down
 
 up-%: up-traefik
 	@bash -c ' \
